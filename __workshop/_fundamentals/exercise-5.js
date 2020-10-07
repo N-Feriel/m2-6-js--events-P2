@@ -37,56 +37,65 @@
 //   },
 // ];
 
-const staffMembers = [
-  {
-    name: "Jane Smith",
-    title: "Web Developer II",
-    skillLevels: {
-      javascript: 7,
-      python: 4,
-      sql: 6,
+const staffMembers = [{
+        name: "Jane Smith",
+        title: "Web Developer II",
+        skillLevels: {
+            javascript: 7,
+            python: 4,
+            sql: 6,
+        },
     },
-  },
-  {
-    name: "Frank Castle",
-    title: "Web Developer I",
-    skillLevels: {
-      javascript: 4,
-      python: 4,
-      sql: 3,
+    {
+        name: "Frank Castle",
+        title: "Web Developer I",
+        skillLevels: {
+            javascript: 4,
+            python: 4,
+            sql: 3,
+        },
     },
-  },
-  {
-    name: "Steve Rogers",
-    title: "Database Admin",
-    skillLevels: {
-      javascript: 7,
-      python: 4,
-      sql: 9,
+    {
+        name: "Steve Rogers",
+        title: "Database Admin",
+        skillLevels: {
+            javascript: 7,
+            python: 4,
+            sql: 9,
+        },
     },
-  },
-  {
-    name: "Chuck Taylor",
-    title: "Web Developer III",
-    skillLevels: {
-      javascript: 8,
-      python: 7,
-      sql: 8,
+    {
+        name: "Chuck Taylor",
+        title: "Web Developer III",
+        skillLevels: {
+            javascript: 8,
+            python: 7,
+            sql: 8,
+        },
     },
-  },
-  {
-    name: "Thor Odinson",
-    title: "Web Intern",
-    skillLevels: {
-      javascript: 4,
-      python: 3,
-      sql: 6,
+    {
+        name: "Thor Odinson",
+        title: "Web Intern",
+        skillLevels: {
+            javascript: 4,
+            python: 3,
+            sql: 6,
+        },
     },
-  },
 ];
 
 const getData = (arr, key, val) => {
-  // return something
+    // return something
+
+    staffMembers.forEach(element => {
+        console.log(Object.keys(element))
+    });
+
+    staffMembers.forEach(element => {
+        if (Object.keys(element) == "skillLevels") {
+            console.log(Object.values(element))
+        }
+    });
 };
 
 // 2. Do a console.log to verify your function.
