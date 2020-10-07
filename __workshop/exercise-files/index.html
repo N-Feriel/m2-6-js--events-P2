@@ -6,59 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap" rel="stylesheet" />
 
     <title>Signup Form</title>
 </head>
 
 <body>
 
-    <h1>Signup Form</h1>
-    <form>
-        <div>
-            <label for="fname">Full name:</label>
-            <input type="text" id="fname" name="fname" />
-        </div>
 
-        <div>
-            <label for="streetAdd">Street address</label>
-            <input type="text" id="streetAdd" name="streetAdd" />
-        </div>
+    <div class="wrapper">
+        <form>
+            <h1>Signup Form</h1>
+            <div>
+                <label for="fname">Full name:</label>
+                <input type="text" id="fname" name="fname" value="" required/>
+            </div>
 
-        <div>
-            <label for="emailAdd">Email address</label>
-            <input type="email" id="emailAdd" name="emailAdd" />
-        </div>
+            <div>
+                <label for="streetAdd">Street address</label>
+                <input type="text" id="streetAdd" name="streetAdd" value="" required />
+            </div>
 
-        <div>
-            <label for="pNumber">Phone number</label>
-            <input type="text" id="pNumber" name="pNumber" />
-        </div>
+            <div>
+                <label for="emailAdd">Email address</label>
+                <input type="email" id="emailAdd" name="emailAdd" value="" required />
+            </div>
 
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" />
-        </div>
+            <div>
+                <label for="pNumber">Phone number</label>
+                <input type="text" id="pNumber" name="pNumber" value="" required/>
+            </div>
 
-        <div>
-            <label for="cPassword">Confrim Password</label>
-            <input type="password" id="cPassword" name="cPassword" />
-        </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" value="" required/>
+            </div>
 
-        <div>
-            <input type="checkbox" id="agree" name="agree" />
-            <label for="agree">I agree to <a href="#">terms of service.</a></label>
+            <div>
+                <label for="cPassword">Confrim Password</label>
+                <input type="password" id="cPassword" name="cPassword" value="" required/>
+            </div>
 
-        </div>
+            <div class="terms">
+                <input type="checkbox" id="agree" name="agree" value="" required/>
+                <label for="agree">I agree to <a href="#">terms of service.</a></label>
 
-        <footer>
+            </div>
+            <div class="error"></div>
 
-            <button>Clear</button>
-            <button>Submit</button>
-        </footer>
+            <footer>
+
+                <button id="clear">Clear</button>
+                <button id="submit">Submit</button>
+            </footer>
 
 
 
-    </form>
+        </form>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
