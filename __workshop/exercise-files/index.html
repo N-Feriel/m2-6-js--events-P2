@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <title>Signup Form</title>
-  </head>
-  <body>
+</head>
+
+<body>
+
+    <h1>Signup Form</h1>
+    <form>
+        <div>
+            <label for="fname">Full name:</label>
+            <input type="text" id="fname" name="fname" />
+        </div>
+
+        <div>
+            <label for="streetAdd">Street address</label>
+            <input type="text" id="streetAdd" name="streetAdd" />
+        </div>
+
+        <div>
+            <label for="emailAdd">Email address</label>
+            <input type="email" id="emailAdd" name="emailAdd" />
+        </div>
+
+        <div>
+            <label for="pNumber">Phone number</label>
+            <input type="text" id="pNumber" name="pNumber" />
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+        </div>
+
+        <div>
+            <label for="cPassword">Confrim Password</label>
+            <input type="password" id="cPassword" name="cPassword" />
+        </div>
+
+        <div>
+            <input type="checkbox" id="agree" name="agree" />
+            <label for="agree">I agree to <a href="#">terms of service.</a></label>
+
+        </div>
+
+        <footer>
+
+            <button>Clear</button>
+            <button>Submit</button>
+        </footer>
+
+
+
+    </form>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
