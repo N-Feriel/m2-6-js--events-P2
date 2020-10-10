@@ -21,14 +21,11 @@ function olderPeople(peopleArr, age) {
     // return something
 
     let oldArr = [];
-    peopleArr.forEach(element => {
 
-        if (((Object.values(element)[1])) > age) {
-            oldArr.push(element)
-        }
+    return oldArr = peopleArr.filter(person => {
+        return person.age > age
+    })
 
-    });
-    return oldArr;
 }
 
 // 2. Do a console.log to verify your function.

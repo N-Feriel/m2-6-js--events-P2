@@ -20,13 +20,25 @@ const people = [
 function fullName(peopleArr) {
     // return something
 
+    let nameArr = peopleArr.map(person => {
+
+        return `${person.name.first} ${person.name.middle} ${person.name.last}`;
+
+    });
     let fullNameArr = [];
-    peopleArr.forEach(element => {
-        fullNameArr.push(Object.values((Object.values(element)[0])).join(" "))
+
+    nameArr.map(name => {
+        ind = name.indexOf(undefined);
+        if (ind == -1) {
+            fullNameArr.push(name)
+
+        } else {
+            fullNameArr.push(name.replace('undefined ', ''))
+        }
 
     });
 
-    return fullNameArr
+    return fullNameArr;
 }
 
 // 2. Do a console.log to verify your function.

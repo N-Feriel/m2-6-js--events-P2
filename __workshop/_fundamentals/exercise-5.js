@@ -87,18 +87,31 @@ const staffMembers = [{
 const getData = (arr, key, val) => {
     // return something
 
-    staffMembers.forEach(element => {
-        console.log(Object.keys(element))
-    });
+    let dataV = arr.filter(person => {
 
-    staffMembers.forEach(element => {
-        if (Object.keys(element) == "skillLevels") {
-            console.log(Object.values(element))
+        if (typeof(val) === 'string') {
+            if (person[key] === val) {
+                return true
+            } else {
+                return false
+            }
+        } else if (typeof(val) === 'number') {
+            if (person.skillLevels[key] >= val) {
+                return true
+            } else {
+                return false
+            }
         }
     });
-};
 
+
+    return dataV;
+
+
+};
 // 2. Do a console.log to verify your function.
+
+
 
 // 3. Run the test to validate: yarn test exercise-5
 

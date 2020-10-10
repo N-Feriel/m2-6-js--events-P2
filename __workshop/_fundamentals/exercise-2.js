@@ -25,10 +25,9 @@ function avgAge(peopleArr) {
     let average = 0;
     let total = 0;
 
-    peopleArr.forEach(element => {
-        total += (Object.values(element)[1])
+    peopleArr.map(person => {
+        total += (person.age)
     });
-
     return average = Math.floor((total / peopleArr.length))
 
 }
